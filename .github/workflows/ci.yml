@@ -28,7 +28,7 @@ jobs:
   deploy:
     name: deploy
     needs: test
-    # if: github.event_name == 'push' && github.ref == 'refs/heads/master' && github.repository_owner == 'rust-lang'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master' && github.repository_owner == 'rust-lang'
     permissions:
       pages: write
       id-token: write
